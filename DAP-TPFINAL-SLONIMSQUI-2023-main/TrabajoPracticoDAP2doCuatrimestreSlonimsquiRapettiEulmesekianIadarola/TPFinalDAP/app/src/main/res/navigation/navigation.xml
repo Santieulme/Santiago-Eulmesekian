@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/pantallaLogin">
+
+    <fragment
+        android:id="@+id/pantallaInicio"
+        android:name="com.example.tpfinaldap.PantallaInicio"
+        android:label="fragment_pantalla_inicio"
+        tools:layout="@layout/fragment_pantalla_inicio" >
+        <action
+            android:id="@+id/action_pantallaInicio_to_dataAuto"
+            app:destination="@id/dataAuto" />
+        <action
+            android:id="@+id/action_pantallaInicio_to_editarAuto"
+            app:destination="@id/editarAuto" />
+        <action
+            android:id="@+id/action_pantallaInicio_to_subirAuto"
+            app:destination="@id/subirAuto" />
+    </fragment>
+    <fragment
+        android:id="@+id/pantallaLogin"
+        android:name="com.example.tpfinaldap.PantallaLogin"
+        android:label="fragment_pantalla_login"
+        tools:layout="@layout/fragment_pantalla_login" >
+        <action
+            android:id="@+id/action_pantallaLogin_to_pantallaRegister"
+            app:destination="@id/pantallaRegister" />
+        <action
+            android:id="@+id/action_pantallaLogin_to_pantallaInicio"
+            app:destination="@id/pantallaInicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/pantallaRegister"
+        android:name="com.example.tpfinaldap.PantallaRegister"
+        android:label="fragment_pantalla_register"
+        tools:layout="@layout/fragment_pantalla_register" >
+        <action
+            android:id="@+id/action_pantallaRegister_to_pantallaLogin"
+            app:destination="@id/pantallaLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataAuto"
+        android:name="com.example.tpfinaldap.DataAuto"
+        android:label="fragment_data_auto"
+        tools:layout="@layout/fragment_data_auto" >
+        <action
+            android:id="@+id/action_dataAuto_to_pantallaInicio"
+            app:destination="@id/pantallaInicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarAuto"
+        android:name="com.example.tpfinaldap.EditarAuto"
+        android:label="fragment_editar_auto"
+        tools:layout="@layout/fragment_editar_auto" >
+        <action
+            android:id="@+id/action_editarAuto_to_pantallaInicio"
+            app:destination="@id/pantallaInicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/subirAuto"
+        android:name="com.example.tpfinaldap.SubirAuto"
+        android:label="fragment_subir_auto"
+        tools:layout="@layout/fragment_subir_auto" >
+        <action
+            android:id="@+id/action_subirAuto_to_pantallaInicio"
+            app:destination="@id/pantallaInicio" />
+    </fragment>
+</navigation>
